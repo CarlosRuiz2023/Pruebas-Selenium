@@ -70,12 +70,12 @@ const ClientesEdit = () => {
   };
 
   const handleSubmit = async (e) => {
-    const idFinal = id.replace(":", "");
+    const idFinal = id;
     e.preventDefault();
     try {
       if (idFinal) {
         updateCliente();
-      } else if (!idFinal) {
+      } else {
         insertarCliente();
       }
     } catch (error) {
@@ -88,6 +88,7 @@ const ClientesEdit = () => {
     try {
       const response = await ClienteAPI.insertarCliente(cliente);
       console.log(response);
+      navigate("/cliente");
     } catch (error) {
       console.log(error);
     }
@@ -98,6 +99,7 @@ const ClientesEdit = () => {
       const idFinal = id.replace(":", "");
       const response = await ClienteAPI.actualizarCliente(idFinal, cliente);
       console.log(response);
+      navigate("/cliente");
     } catch (error) {
       console.log(error);
     }
@@ -114,7 +116,7 @@ const ClientesEdit = () => {
             <h5 className="card-header border-0 fs-3">Editar Cliente</h5>
           )}
           <div className="card-body p-5">
-            <form onSubmit={handleSubmit}>
+            <form>
               <div className="row">
                 <div className="col-md-6">
                   <div className="mb-3">
@@ -272,7 +274,11 @@ const ClientesEdit = () => {
                   value={cliente.longitud}
                 />
               </div>
-              <button type="submit" className="btn btn-primary">
+              <button
+                type="button"
+                className="btn btn-primary"
+                onClick={handleSubmit}
+              >
                 {!id ? "Guardar" : "Editar"} Cliente{" "}
                 <i className="bi bi-floppy"></i>
               </button>
