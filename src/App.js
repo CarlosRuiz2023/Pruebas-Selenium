@@ -24,7 +24,7 @@ const App = () => {
           <Route element={<ProtectedRoute isAllowed={!!user} />} >
             <Route path="/cliente" element={<Clientes />} />
             <Route path="/cliente/:id" element={<ClientesEdit />} />
-            <Route path="/cliente/nuevo" element={<ClientesEdit />} />
+            <Route path="/cliente/nuevo/" element={<ClientesEdit />} />
             <Route path="/ventas" element={<Ventas />} />
           </Route> 
           <Route path="*" element={<NotFound />} />
