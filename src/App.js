@@ -1,57 +1,34 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Confetti from "./Confetti";
-
-const shareMessage = "I just ran my first container using Docker";
-const shareLink = "https://docker.com/";
+import Header from "./components/Header";
+import Login from "./pages/Login";
+import Clientes from "./pages/Clientes";
+import ClientesEdit from "./pages/ClientesEdit";
+import Ventas from "./pages/Ventas";
+import NotFound from "./pages/NotFound";
+import { ProtectedRoute } from "./components/ProtectedRoutes";
+import { useSelector } from "react-redux";
 
 const App = () => {
+
+  const user = useSelector((state) => state.login.user);
+
   return (
     <div className="App">
-      <Confetti />
-      <header className="App-header">
-        <h1 style={{ marginBottom: "0px" }}>Congratulations!!!</h1>
-        <p style={{ marginTop: "10px", marginBottom: "50px" }}>
-          You ran your first container.
-        </p>
-        <div>
-          <a
-            target="_blank"
-            href={
-              "https://twitter.com/intent/tweet?text=" +
-              shareMessage +
-              "&url=" +
-              shareLink
-            }
-            class="fa-brands fa-x-twitter"
-            rel="noopener noreferrer"
-          >
-            {" "}
-          </a>
-          <a
-            target="_blank"
-            href={
-              "https://www.linkedin.com/sharing/share-offsite/?url=" + shareLink
-            }
-            class="fa-brands fa-linkedin"
-            rel="noopener noreferrer"
-          >
-            {" "}
-          </a>
-          <a
-            target="_blank"
-            href={
-              "https://reddit.com/submit?title=" +
-              shareMessage +
-              "&url=" +
-              shareLink
-            }
-            class="fa-brands fa-reddit"
-            rel="noopener noreferrer"
-          >
-            {" "}
-          </a>
-        </div>
-      </header>
+      {!user ? <Confetti /> : null}
+      <Header />
+        <Routes>
+          <Route index element={<Login />} />   
+          <Route path="/" element={<Login />} /> 
+          <Route element={<ProtectedRoute isAllowed={!!user} />} >
+            <Route path="/cliente" element={<Clientes />} />
+            <Route path="/cliente/:id" element={<ClientesEdit />} />
+            <Route path="/cliente/nuevo" element={<ClientesEdit />} />
+            <Route path="/ventas" element={<Ventas />} />
+          </Route> 
+          <Route path="*" element={<NotFound />} />
+        </Routes>
     </div>
   );
 };
