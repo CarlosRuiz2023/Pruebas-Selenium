@@ -11,24 +11,23 @@ import { ProtectedRoute } from "./components/ProtectedRoutes";
 import { useSelector } from "react-redux";
 
 const App = () => {
-
   const user = useSelector((state) => state.login.user);
 
   return (
     <div className="App">
       {!user ? <Confetti /> : null}
       <Header />
-        <Routes>
-          <Route index element={<Login />} />   
-          <Route path="/" element={<Login />} /> 
-          <Route element={<ProtectedRoute isAllowed={!!user} />} >
-            <Route path="/cliente" element={<Clientes />} />
-            <Route path="/cliente/:id" element={<ClientesEdit />} />
-            <Route path="/cliente/nuevo/" element={<ClientesEdit />} />
-            <Route path="/ventas" element={<Ventas />} />
-          </Route> 
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      <Routes>
+        <Route index element={<Login />} />
+        <Route path="/" element={<Login />} />
+        <Route element={<ProtectedRoute isAllowed={!!user} />}>
+          <Route path="/cliente" element={<Clientes />} />
+          <Route path="/cliente/:id" element={<ClientesEdit />} />
+          <Route path="/cliente/nuevo/" element={<ClientesEdit />} />
+          <Route path="/ventas" element={<Ventas />} />
+        </Route>
+        <Route path="*" element={<NotFound />} />
+      </Routes>
     </div>
   );
 };

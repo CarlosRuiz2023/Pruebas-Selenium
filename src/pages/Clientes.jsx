@@ -6,6 +6,9 @@ import { Link, useNavigate } from "react-router-dom";
 const Clientes = () => {
   const navigate = useNavigate();
   const [clientes, setClientes] = useState([]);
+  const [busqueda, setBusqueda] = useState({
+    nombre: "",
+  });
 
   const obtenerClientes = async () => {
     const response = await ClienteAPI.obtenerClientes();
@@ -19,19 +22,53 @@ const Clientes = () => {
   const handleEliminarCliente = async (id) => {
     await ClienteAPI.eliminarCliente(id);
     setClientes(clientes.filter((cliente) => cliente.id !== id));
+    obtenerClientes(clientes);
   };
 
   const handleEditarCliente = async (id) => {
     navigate(`/cliente/:${id}`);
   };
 
+  const handleChanges = (e) => {
+    setBusqueda(e.target.value);
+  };
+
+  const handleBuscarCliente = async (e) => {
+    e.preventDefault();
+    console.log(busqueda);
+    const response = await ClienteAPI.obtenerClientesPorNombre(busqueda);
+    setClientes(response);
+  };
+
   return (
     <div className="bg-secondary bg-gradient bg-opacity-25 p-3">
       <div className="col-md-12">
-        <div className="col-md-2 offset-md-10">
-          <Link className="btn btn-success fw-bold" to={`/cliente/nuevo`}>
-            <i className="bi bi-plus-circle fs-5"></i> Nuevo Cliente
-          </Link>
+        <div className="row">
+          <div className="col-md-6 offset-md-2">
+            <div class="input-group mb-3">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Buscar cliente"
+                name="nombre"
+                id="nombre"
+                onChange={handleChanges}
+              />
+              <button
+                id="search"
+                name="search"
+                class="btn btn-primary"
+                onClick={handleBuscarCliente}
+              >
+                <i className="bi bi-search me-3 ms-3 fs-5"></i>
+              </button>
+            </div>
+          </div>
+          <div className="col-md-2">
+            <Link className="btn btn-success fw-bold" to={`/cliente/nuevo`}>
+              <i className="bi bi-plus-circle fs-5"></i> Nuevo Cliente
+            </Link>
+          </div>
         </div>
       </div>
       <div className="card border-0 m-3">

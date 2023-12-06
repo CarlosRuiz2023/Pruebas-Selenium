@@ -116,7 +116,7 @@ const ClientesEdit = () => {
             <h5 className="card-header border-0 fs-3">Editar Cliente</h5>
           )}
           <div className="card-body p-5">
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-md-6">
                   <div className="mb-3">
@@ -274,11 +274,7 @@ const ClientesEdit = () => {
                   value={cliente.longitud}
                 />
               </div>
-              <button
-                type="button"
-                className="btn btn-primary"
-                onClick={handleSubmit}
-              >
+              <button className="btn btn-primary" id="guardar1" name="guardar1">
                 {!id ? "Guardar" : "Editar"} Cliente{" "}
                 <i className="bi bi-floppy"></i>
               </button>

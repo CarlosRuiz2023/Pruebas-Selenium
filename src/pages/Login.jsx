@@ -47,6 +47,7 @@ const Login = () => {
                         type="text"
                         className="form-control"
                         name="username"
+                        id="username"
                         onChange={handleChange}
                         value={user.username}
                       />
@@ -56,7 +57,7 @@ const Login = () => {
                       <input
                         type="password"
                         className="form-control"
-                        id="exampleInputPassword1"
+                        id="password"
                         name="password"
                         onChange={handleChange}
                         value={user.password}
@@ -73,7 +74,12 @@ const Login = () => {
                         Recordar mis datos
                       </label>
                     </div>
-                    <button type="submit" className="btn btn-primary">
+                    <button
+                      name="loginButton"
+                      id="loginButton"
+                      type="submit"
+                      className="btn btn-primary"
+                    >
                       Iniciar sesión
                     </button>
                   </form>
