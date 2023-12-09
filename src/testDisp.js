@@ -10,10 +10,10 @@ setInterval(async () => {
     let currentDate = new Date().toLocaleString();
     try {
       // Navegar a la aplicación en localhost:3000
-      await driver.get("http://localhost:3000");
+      await driver.get("https://pruebasselenium.azurewebsites.net/");
       currentDate = new Date().toLocaleString();
       await logStream.write(
-        `[${currentDate}] Navigated to: http://localhost:3000\n`
+        `[${currentDate}] Navigated to: https://pruebasselenium.azurewebsites.net/\n`
       );
 
       try {
@@ -69,7 +69,7 @@ setInterval(async () => {
     } catch (err) {
       currentDate = new Date().toLocaleString();
       await logStream.write(
-        `[${currentDate}] Error!!!!!! No fue posible acceder a: http://localhost:3000\n`
+        `[${currentDate}] Error!!!!!! No fue posible acceder a: https://pruebasselenium.azurewebsites.net/\n`
       );
     }
   } finally {
