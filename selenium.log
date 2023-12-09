@@ -1,0 +1,71 @@
+[8/12/2023, 11:35:32] Navigated to: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 11:35:32] User 'admin' logueado
+[8/12/2023, 11:35:32] User 'admin' Accedio al catalogo de clientes
+[8/12/2023, 11:35:37] User 'admin'  Busco un Cliente
+[8/12/2023, 11:35:41] User 'admin' Accedio al catalogo de ventas
+[8/12/2023, 11:38:17] Se accedio a: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 11:38:18] User 'admin' logueado in
+[8/12/2023, 11:38:18] User 'admin' Accedio al catalogo de clientes in
+[8/12/2023, 11:38:20] User 'admin'  Accedio al componente de agregar Cliente
+[8/12/2023, 11:38:28] User 'admin'  Inserto un Cliente nuevo
+[8/12/2023, 11:38:36] User 'admin'  Busco un Cliente
+[8/12/2023, 11:38:38] User 'admin'  Accedio a editar un Cliente
+[8/12/2023, 11:38:48] User 'admin'  Modifico un Cliente
+[8/12/2023, 11:38:55] User 'admin'  Busco un Cliente
+[8/12/2023, 11:38:59] User 'admin'  Elimino un Cliente
+[8/12/2023, 11:40:19] Se accedio a: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 11:40:20] User 'admin' logueado in
+[8/12/2023, 11:40:20] User 'admin' Accedio al catalogo de clientes in
+[8/12/2023, 11:40:22] User 'admin'  Accedio al componente de agregar Cliente
+[8/12/2023, 11:40:30] User 'admin'  Inserto un Cliente nuevo
+[8/12/2023, 11:40:38] User 'admin'  Busco un Cliente
+[8/12/2023, 11:40:40] User 'admin'  Accedio a editar un Cliente
+[8/12/2023, 11:40:50] User 'admin'  Modifico un Cliente
+[8/12/2023, 11:40:56] User 'admin'  Busco un Cliente
+[8/12/2023, 11:41:00] User 'admin'  Elimino un Cliente
+[8/12/2023, 19:34:16] Navigated to: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:34:16] Error!!!!!! No fue posible loguearse
+[8/12/2023, 19:34:16] Navigated to: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:34:16] Error!!!!!! No fue posible loguearse
+[8/12/2023, 19:35:45] Navigated to: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:35:49] User 'admin' logueado
+[8/12/2023, 19:35:49] User 'admin' Accedio al catalogo de clientes
+[8/12/2023, 19:35:54] User 'admin'  Busco un Cliente
+[8/12/2023, 19:35:58] User 'admin' Accedio al catalogo de ventas
+[8/12/2023, 19:36:42] Navigated to: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:36:42] User 'admin' logueado
+[8/12/2023, 19:36:42] User 'admin' Accedio al catalogo de clientes
+[8/12/2023, 19:36:48] User 'admin'  Busco un Cliente
+[8/12/2023, 19:36:52] User 'admin' Accedio al catalogo de ventas
+[8/12/2023, 19:37:40] Error!!!!!! No fue posible acceder a: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:41:20] Se accedio a: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:41:21] User 'admin' logueado in
+[8/12/2023, 19:41:21] User 'admin' Accedio al catalogo de clientes in
+[8/12/2023, 19:41:23] User 'admin'  Accedio al componente de agregar Cliente
+[8/12/2023, 19:41:31] User 'admin'  Inserto un Cliente nuevo
+[8/12/2023, 19:41:39] User 'admin'  Busco un Cliente
+[8/12/2023, 19:41:41] User 'admin'  Accedio a editar un Cliente
+[8/12/2023, 19:41:51] User 'admin'  Modifico un Cliente
+[8/12/2023, 19:41:57] User 'admin'  Busco un Cliente
+[8/12/2023, 19:42:01] User 'admin'  Elimino un Cliente
+[8/12/2023, 19:43:16] Se accedio a: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:43:17] User 'admin' logueado in
+[8/12/2023, 19:43:17] User 'admin' Accedio al catalogo de clientes in
+[8/12/2023, 19:43:19] User 'admin'  Accedio al componente de agregar Cliente
+[8/12/2023, 19:43:26] User 'admin'  Inserto un Cliente nuevo
+[8/12/2023, 19:43:35] User 'admin'  Busco un Cliente
+[8/12/2023, 19:43:37] User 'admin'  Accedio a editar un Cliente
+[8/12/2023, 19:43:46] User 'admin'  Modifico un Cliente
+[8/12/2023, 19:43:53] User 'admin'  Busco un Cliente
+[8/12/2023, 19:43:57] User 'admin'  Elimino un Cliente
+[8/12/2023, 19:45:13] Error!!!!!! No fue posible acceder a: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:47:15] Se accedio a: https://pruebasselenium.azurewebsites.net/
+[8/12/2023, 19:47:15] User 'admin' logueado in
+[8/12/2023, 19:47:15] User 'admin' Accedio al catalogo de clientes in
+[8/12/2023, 19:47:18] User 'admin'  Accedio al componente de agregar Cliente
+[8/12/2023, 19:47:25] User 'admin'  Inserto un Cliente nuevo
+[8/12/2023, 19:47:34] User 'admin'  Busco un Cliente
+[8/12/2023, 19:47:36] User 'admin'  Accedio a editar un Cliente
+[8/12/2023, 19:47:45] User 'admin'  Modifico un Cliente
+[8/12/2023, 19:47:51] User 'admin'  Busco un Cliente
+[8/12/2023, 19:47:56] User 'admin'  Elimino un Cliente
